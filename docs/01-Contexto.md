@@ -1,43 +1,21 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+No mundo atual, a gestão eficiente do tempo é essencial para a produtividade e organização pessoal e profissional. Com rotinas cada vez mais dinâmicas e exigentes, indivíduos enfrentam dificuldades para planejar e acompanhar suas atividades diárias. A ausência de um sistema estruturado pode resultar em atrasos, esquecimentos e dificuldades na priorização de tarefas, impactando diretamente o desempenho e a qualidade do trabalho.
 
 ## Problema
-Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
+No dia a dia, muitas pessoas enfrentam dificuldades para organizar suas tarefas e compromissos de forma eficiente. A falta de um sistema estruturado para gerenciar rotinas pode resultar em atrasos, esquecimentos, baixa produtividade e estresse. Muitas pessoas utilizam de métodos manuais para organização ou aplicativos simples de organização. Portanto, há uma necessidade clara de uma solução tecnológica que automatize a gestão de rotinas, oferecendo uma maneira prática e intuitiva para que usuários individuais possam planejar, acompanhar e otimizar suas atividades diárias.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite uma visão completa do problema.
-
-> **Links úteis**:
-> - [Objetivos, problema de pesquisa e justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz certezas, suposições e dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui, você deve descrever os objetivos do trabalho, indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima.
-
-Além disso, apresente alguns (pelo menos 3) objetivos específicos, dependendo de onde você pretende concentrar sua prática investigativa ou como deseja aprofundar seu trabalho.
+Desenvolver um sistema de rotinas que facilite a organização e o gerenciamento de tarefas diárias, permitindo que usuários individuais e equipes planejem, acompanhem e otimizem suas atividades de forma eficiente. O sistema será projetado para minimizar esquecimentos, melhorar a produtividade e proporcionar uma experiência intuitiva para a gestão de compromissos e responsabilidades. 
+No caso implementar um sistema de cadastro e gerenciamento de tarefas que permita aos usuários criar, editar e excluir atividades, organizando-as por prioridade, categoria e prazo. No caso o sistema terá uma interface intuitiva e acessível que facilite a navegação e o uso do mesmo, garantindo que os usuáriosnpossam gerenciar suas rotinas de forma simples e eficaz. Os usuários vão poder também acompanhar suas tarefas diária, semanal e mensalmente.
  
-> **Links úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A criação de um sistema que organize, acompanhe e otimize as rotinas diárias é fundamental para aumentar a produtividade pessoal e profissional, reduzir a falta de foco e melhorar o desempenho geral em qualquer contexto, seja individual ou corporativo, além disso o sistema de rotinas se justifica também pela crescente necessidade de organização e otimização do tempo em um mundo cada vez mais dinâmico e multitarefa. A sobrecarga de compromissos, a crescente quantidade de tarefas diárias e a dificuldade em gerenciar prazos podem levar a atrasos, esquecimentos e estresse, prejudicando a produtividade pessoal.
 
 ## Público-alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação, mas sim oferecer uma visão detalhada do perfil de cada grupo de usuários. Isso inclui informações sobre seu nível de conhecimento prévio, familiaridade com tecnologia, e suas relações hierárquicas ou contextos de uso. Dessa forma, será possível entender melhor as necessidades e expectativas dos diferentes tipos de usuários, garantindo uma experiência mais eficiente e adaptada.
-
-> **Links úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público-alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Em um contexto geral esse sistema servirá para a maioria das pessoas, independente da profissão, classe social e idade. Como citado o sistema terá uma interface simples e o seu funcionamento será intuitivo com isso possibilitando que o usuário organize sua rotina diária, semanal e mensal de uma forma que ele não terá problemas com suas atividades.
