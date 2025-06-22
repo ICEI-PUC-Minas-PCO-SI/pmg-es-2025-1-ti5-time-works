@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUserId": 1750629162903
+    "lastUserId": 1750633395101
   },
   "achievements": [
     {
@@ -579,6 +579,16 @@
       "id": "user1750629162903",
       "senha": "123",
       "name": "Janio",
+      "profilePic": "assets/img/man.png",
+      "xp": 0,
+      "level": 1,
+      "hasSeenTutorial": true,
+      "unlockedAchievements": []
+    },
+    {
+      "id": "user1750633395101",
+      "senha": "1234",
+      "name": "teste21",
       "profilePic": "assets/img/man.png",
       "xp": 0,
       "level": 1,
