@@ -5,29 +5,30 @@
 
 ## Slides
 
-![1](https://github.com/user-attachments/assets/d476d5e8-e733-4ee2-995b-3be20881563e)
+Coloque aqui o conjunto de slides.
 
-![2](https://github.com/user-attachments/assets/e7680447-d941-4085-b10c-40da3bb943bc)
+> O arquivo deve estar no formato PDF e conter a apresentação completa do projeto, abordando todos os itens trabalhados nos demais artefatos. 
 
-![3](https://github.com/user-attachments/assets/3d506c9a-d750-476a-b573-3b6c65ca5373)
-
-![4](https://github.com/user-attachments/assets/b94c0cb9-227e-4053-8107-a61a26a32567)
-
-![5](https://github.com/user-attachments/assets/f9983025-4540-4df4-b8cc-0ab7fcd2a63c)
-
-![6](https://github.com/user-attachments/assets/c4804f62-3889-4b4e-ac35-6bc4518a6868)
-
-![7](https://github.com/user-attachments/assets/a3b89b71-4afb-4390-9881-79c2c4b9e788)
-
-![8](https://github.com/user-attachments/assets/76979380-d7e6-4f0b-bf25-7a8db9fcf961)
-
-![9](https://github.com/user-attachments/assets/37c0c615-df7e-41b8-b085-65232106f1ba)
+> **Links úteis**:
+> - [10 dicas de design para slides](https://rockcontent.com/blog/design-para-slides/)
+> - [7 dicas de design para criar apresentações de PowerPoint incríveis e eficientes](https://www.shutterstock.com/pt/blog/7-dicas-de-design-para-criar-apresentacoes-de-powerpoint-incriveis-e-eficientes)
+> - [Especialista do TED dá 10 dicas para criar slides eficazes e bonitos](https://soap.com.br/blog/especialista-do-ted-da-10-dicas-para-criar-slides-eficazes-e-bonitos)
+> - [A regra 10-20-30 para apresentações de sucesso](https://revistapegn.globo.com/Noticias/noticia/2014/07/regra-10-20-30-para-apresentacoes-de-sucesso.html)
+> - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)
+> - [How to make a great presentation](https://www.ted.com/playlists/574/how_to_make_a_great_presentation)
 
 
+## Vídeo
 
+O grupo também deverá gravar um vídeo de até cinco minutos apresentando a solução. O vídeo deve incluir uma demonstração da aplicação hospedada, mostrando seu funcionamento.
 
+Podem utilizar quaisquer recursos na produção do vídeo, mas certifiquem-se de destacar as funcionalidades da aplicação.
 
+A seguir, estão as especificações técnicas que devem ser seguidas na criação do vídeo:
 
-
+> - tamanho do arquivo limitado a 90Mb
+> - taxa de FPS limitada a 30 quadros por segundo
+> - resolução HD (720p) ou Full HD (1080p)
+> - formato mp4.
 
 
