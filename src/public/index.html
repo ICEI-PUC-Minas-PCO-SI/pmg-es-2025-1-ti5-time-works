@@ -1,78 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/login.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="banner">
-        <img src="./assets/images/banner_ti.png" alt="" />
-      </div>
-      <div class="barra-info">
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <div class="dados-usuario">
-          <span id="userInfo"></span>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Time Works</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userId = localStorage.getItem('currentUserId');
+            if (!userId) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</head>
+
+<body class="d-flex flex-column vh-100 m-0 ">
+
+    <header class="d-flex text-white p-2 align-items-center position-relative">
+        <button class="openmodal"> <img src="assets/img/man.png" alt="opnmodal" class="openmodalimg"> </button>
+        <div class="d-flex">
+            <img src="assets/img/logo.png" style="height: 60px; width: auto;">
         </div>
-      </div>
+
+        <div class="toggle-switch-container">
+            <label class="switch">
+                <input type="checkbox" id="todolist-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <nav class="d-flex gap-2 h-100">
+            <button class="text-white" id="voltar">&lt;</button>
+            <p id="mesAtual"></p>
+            <button class="text-white" id="avancar">&gt;</button>
+            <button class="text-white " id="hoje">Hoje</button>
+        </nav>
+
+        <div class="d-flex flex-column gap-1 ms-1 h-100">
+            <button class="text-white" id="botaoCalendarioMes">Mês</button>
+            <button class="text-white" id="botaoCalendarioSemanal">Semana</button>
+            <button class="text-white" id="botaoCalendarioDia">Dia</button>
+        </div>
+
     </header>
-    <main>
-        <h3>Boas vindas</h3>
-        <p>Sejam bem-vindos à home-page do projeto de TI 1 - Trabalho
-        Interdisciplinar</p>
-        <p>Esse conteúdo que você está lendo foi criado para exemplificar como
-        criar o seu site integrado com o ambiente de login e o back end que
-        utiliza o JSON Server.</p>
-        <p>Ao criar o seu site, você deve adaptar esse código para sua neessidade ou começar do zero, excluindo todo esse conteúdo.
-        </p>
 
-        <h3>Arquivos do site (Front End)</h3>
-        <p>Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta <code>public</code> que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.</p>
+    <div class="flex-grow-1 d-flex main-content-wrapper">
 
-        <p>Nesta pasta <code>public</code>, sugerimos que você organize os arquivos do seu site da seguinte maneira:</p>
-        <ul>
-            <li><strong>Pasta <code>assets</code></strong>: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.</li>
-            <li><strong>Pasta <code>modulos</code></strong>: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.</li>
-            <li><strong>Arquivo <code>index.html</code></strong>: arquivo que representa a "home page" do site.</li>
-        </ul>
+        <aside class="p-3">
+            <div id="sequenciaTarefas"></div>
+            <div id="prioridadeTarefasContainer"></div>
+        </aside>
 
-        <h3>Módulo de Login</h3>
-        <p>O módulo de login de usuário traz uma funcionalidade completa de registro de usuários e validação de login e senha.</p>
-        <h4>Integração do site com módulo de Login</h4>
-        <p>Para utilizar o módulo de login, basta incluir o script na sua página colocando a seguinte tag no HEAD</p>
-        <pre>&lt;script src="./assets/js/login.js"&gt&lt;script&gt;</pre>
-        <p>Ao incluir o script de login na sua página, caso o usuário ainda não tenha efetuado login, ao acessar a home-page do site, o navegador será direcionado para o formulário de <strong>Identificação de Usuário</strong>. Se o usuário informar corretamente o login e a senha, o navegador será direcionado para a Home-Page.</p>
-        <h4>Sessão do usuário logado</h4>
-        <p>Assim que o usuário se identifica e acessa a parte privada do site, o módulo de login cria uma chave do sessionStorage do navegador com o título <strong>usuarioCorrente</strong> e cujo conteúdo é um objeto com os atributos: id, nome, login, senha e email. </p>
-        <h4>Base de dados de usuários</h4>
-        <p>Inicialmente o módulo de login é configurado com dois usuários: </p>
-        <ul>
-            <li>admin - Senha: 123</li>
-            <li>user - Senha: 123</li>
-        </ul>
+        <div class="content-flipper flex-grow-1">
 
-        <h3>Servidor Web e API baseada no JSON Server (Back end)</h3>
-        <p>O ambiente de trabalho disponibilizado para suportar o Trabalho Interdisciplinar 1 é baseado no Node.js. A aplicação de back end utiliza o módulo JSON Server para criar um Servidor Web que prove duas estruturas separadas:
-        <ul>
-            <li><strong>Arquivos estáticos (Pasta <code>public</code>)</strong>: da acesso aos arquivos utilizados no front end (HTML, CSS e JavaScript).</li>
-            <li><strong>API RESTful (pasta <code>db</code>)</strong>: uma interface para acesso aos dados definidos no arquivo db.json.</li>
-        </ul></p>
+            <main class="d-flex flex-grow-1 p-2 rounded flex-column">
+                <div>
+                    <div id="cabecalhoCalendario"></div>
+                </div>
+                <div id="canvaCalendario"></div>
+            </main>
 
-        <h4>Arquitetura do site</h4>
-        <p>A imagem que se segue apresenta a arquitetura desse ambiente, mostrando as duas refletindo as pastas desse ambiente.</p>
-        <p><img class="img-fluid d-block w-75 m-auto" src="./assets/images/servidor.png" alt=""></p>
+            <div id="todolist" class="todolist-wrapper flex-grow-1 p-2 rounded"></div>
 
-        <h4>Arquivo db.json</h4>
-        <p>O arquivo JSON utilizado para definição das estruturas dos dados providos pela aplicação é localizado na pasta db e tem um formato como o mostrado no exemplo da figura a seguir. Esse arquivo define uma estrutura hipotética de contatos que descreve itens com os seguintes atributos: <code>id</code>, <code>nome</code> e <code>cidade</code>. para o JSON Server, é fundamental que toda estrutura tenha um atributo de identificador de nome <code>id</code>.</p>
-        <p><img class="img-fluid d-block w-50 m-auto" src="./assets/images/arquivo_json.png" alt=""></p>
-    </main>
-  </body>
+        </div>
+    </div>
+    <dialog>
+        <div id="alinharbotaoclose">
+            <button class="buttonclose"><img src="assets/img/close50px.png" alt="closebtn" class="btnc"></button>
+        </div>
+
+        <div id="menu">
+            <div class="imgperfildiv">
+                <img src="assets/img/man.png" alt="imagem de perfil" class="imgperfil">
+                <button id="edit-profile-btn">
+                    <img src="assets/img/edit.jpeg" alt="Editar Perfil" class="edit-btn-img">
+                </button>
+            </div>
+
+            <div class="menutxt">
+                <div class="user-info-line">
+                    <span class="username">Usuário-teste</span><span class="separator"> • </span>
+                    <span class="userid">#00000</span><span class="separator"> • </span>
+                    <span id="userlevel">Nível: 0</span>
+                </div>
+
+                <div class="xp-bar-container">
+                    <div class="xp-bar-fill"></div>
+                    <span class="xp-bar-text">0%</span>
+                </div>
+            </div>
+
+            <div class="conquistas-section">
+                <h3 class="conquistas-title">Conquistas</h3>
+                <div class="card-container" id="conquistas-container">
+                </div>
+            </div>
+        </div>
+
+        <div id="edit-modal" class="edit-modal">
+            <div class="edit-modal-content">
+                <span class="close-edit-modal"><img src="assets/img/close25px.png" alt="Fecha Página de edição"></span>
+                <h2>Editar Perfil</h2>
+                <div class="form-group">
+                    <label for="username-input">Nome de Usuário:</label>
+                    <input type="text" id="username-input" class="edit-input">
+                </div>
+                <div class="form-group">
+                    <label>Escolha sua foto de perfil:</label>
+                    <div class="profile-pic-options">
+                        <img src="assets/img/man.png" class="profile-option" data-value="assets/img/man.png">
+                        <img src="assets/img/woman.png" class="profile-option" data-value="assets/img/woman.png">
+                        <img src="assets/img/man2.png" class="profile-option" data-value="assets/img/man2.png">
+                    </div>
+                </div>
+                <button id="save-changes-btn">Salvar Alterações</button>
+            </div>
+        </div>
+    </dialog>
+
+    <div id="tutorialContainer">
+        <div class="welcome-overlay" id="welcome-overlay">
+            <div class="welcome-card">
+                <div class="close-welcome" id="close-welcome"></div>
+                <div class="welcome-content">
+                    <h2>Bem-vindo ao Time Works!</h2>
+                    <p>Este é o seu primeiro acesso. Deseja fazer um tour pelas funcionalidades?</p>
+                    <div class="welcome-buttons">
+                        <button id="start-tutorial" class="btn">Iniciar Tutorial</button>
+                        <button id="skip-welcome" class="btn btn-skip">Pular</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tutorial-overlay" id="tutorial-overlay">
+            <div class="tutorial-carousel">
+                <div class="close-tutorial" id="close-tutorial"></div>
+                <div class="carousel-slides">
+                    <div class="slide active">
+                        <h3>Visão Geral da Página Inicial</h3>
+                        <p>Aqui você tem uma visão geral do seu calendário e das tarefas mais importantes.</p>
+                        <img src="assets/img/home.png" alt="Página Inicial"
+                            style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-top: 10px;">
+                    </div>
+                    <div class="slide">
+                        <h3>Edição de Tarefas</h3>
+                        <p>Clique em uma tarefa para ver os detalhes e usar as opções de edição.</p>
+                        <img src="assets/img/edit-task.gif" alt="Edição de Tarefa"
+                            style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-top: 10px;">
+                    </div>
+                    <div class="slide">
+                        <h3>Navegação pela Barra Lateral</h3>
+                        <p>Utilize a barra lateral para acessar diferentes seções da aplicação, como perfil e
+                            configurações.</p>
+                        <img src="assets/img/sidebar.gif" alt="Barra Lateral"
+                            style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-top: 10px;">
+                    </div>
+                    <div class="slide">
+                        <h3>Seu Perfil e Progresso</h3>
+                        <p>Acesse a seção de perfil para visualizar suas conquistas, nível e outras informações.</p>
+                        <img src="assets/img/profile.gif" alt="Perfil do Usuário"
+                            style="max-width: 100%; height: auto; border: 1px solid #ccc; margin-top: 10px;">
+                    </div>
+                    <div class="slide">
+                        <h3>Pronto para Começar!</h3>
+                        <p>Você completou o tutorial. Explore a aplicação e comece a gerenciar suas tarefas!</p>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-dots">
+                        <div class="dot active" data-index="0"></div>
+                        <div class="dot" data-index="1"></div>
+                        <div class="dot" data-index="2"></div>
+                        <div class="dot" data-index="3"></div>
+                        <div class="dot" data-index="4"></div>
+                    </div>
+                    <div class="carousel-buttons">
+                        <button class="btn btn-prev" id="prev-btn" disabled>Anterior</button>
+                        <button class="btn" id="next-btn">Próximo</button>
+                        <button class="btn btn-skip" id="skip-btn">Pular Tutorial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/tutorial.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/sequencia.js"></script>
+    <script src="assets/js/conquista.js"></script>
+    <script src="assets/js/perfil.js"></script>
+    <script src="assets/js/prioridade.js"></script>
+</body>
+
 </html>
