@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "lastUserId": 5
+    "lastUserId": 1750629162903
   },
   "achievements": [
     {
@@ -574,6 +574,16 @@
         6,
         10
       ]
+    },
+    {
+      "id": "user1750629162903",
+      "senha": "123",
+      "name": "Janio",
+      "profilePic": "assets/img/man.png",
+      "xp": 0,
+      "level": 1,
+      "hasSeenTutorial": true,
+      "unlockedAchievements": []
     }
   ],
   "todo_tasks": [
