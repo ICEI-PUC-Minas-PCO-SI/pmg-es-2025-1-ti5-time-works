@@ -25,7 +25,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A r
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento.
 
 * Scrum Master: MATEUS CORREIA DOS SANTOS  
-* Product Owner: MATEUS CORREIA DOS SANTOS 
+* Product Owner: JÂNIO JÚNIO DE FREITAS CARDOSO 
 * Equipe de Desenvolvimento: JÂNIO JÚNIO DE FREITAS CARDOSO, JOSÉ PEDRO MENDES NETO, LUCAS HENRIQUE P. DA SILVA, MATEUS CORREIA DO SANTOS. 
 * Equipe de Design: MATEUS C. DOS SANTOS, JOSÉ PEDRO M. NETO, JÂNIO J. DE FREITAS CARDOSO.
 
